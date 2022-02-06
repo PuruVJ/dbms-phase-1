@@ -129,5 +129,8 @@ h1 {
 }
 
 #intro .main .image img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
   border-radius: 50%;
 }
