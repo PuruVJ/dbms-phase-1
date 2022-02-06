@@ -1,0 +1,23 @@
+@import url(./globals.css);
+
+body {
+  background: var(--app-color-black);
+}
+
+* {
+  color: var(--app-color-white);
+}
+
+*::selection {
+  background-color: var(--app-color-white);
+  color: var(--app-color-black);
+}
+
+h1 {
+  font-size: 5.625rem;
+}
+
+.center-heading {
+  display: flex;
+  justify-content: center;
+}
