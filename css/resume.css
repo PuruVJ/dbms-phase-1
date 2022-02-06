@@ -87,7 +87,7 @@ h1 {
 
   border-radius: 12px;
 
-  box-shadow: 0 0 0 2px var(--app-color-white);
+  box-shadow: 0 0 0 2px var(--color-contrast);
 }
 
 .scroll-down .dot {
@@ -96,7 +96,7 @@ h1 {
 
   border-radius: 50%;
 
-  background-color: var(--app-color-white);
+  background-color: var(--color-contrast);
 
   transform: translateY(-7px);
 
@@ -105,15 +105,12 @@ h1 {
 
 @keyframes dot {
   0% {
-    -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
   }
   80% {
-    -webkit-transform: translateY(7px);
     transform: translateY(7px);
   }
   100% {
-    -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
   }
 }
