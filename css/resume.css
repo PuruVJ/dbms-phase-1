@@ -4,6 +4,33 @@ html {
   scroll-behavior: smooth;
 }
 
+.heading {
+  position: relative;
+}
+
+.heading::before,
+.heading::after {
+  content: '';
+  position: absolute;
+
+  height: 3px;
+  background-color: var(--color-contrast);
+}
+
+.heading::before {
+  left: 10%;
+  bottom: 0%;
+
+  width: 80%;
+}
+
+.heading::after {
+  left: 20%;
+  bottom: -15%;
+
+  width: 60%;
+}
+
 h1 {
   font-size: 4.5rem;
 }
@@ -176,4 +203,68 @@ h2 {
 
 #experience .experience-list .experience-box .department {
   font-size: 1.2rem;
+}
+
+#education .inner .content {
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#education .education-list {
+  width: 100%;
+
+  display: flex;
+
+  overflow-x: scroll;
+
+  scroll-snap-type: x mandatory;
+}
+
+#education .education-list .education-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 60vh;
+  width: 100vw;
+
+  flex: 0 0 100%;
+
+  padding: 5rem 6rem;
+
+  scroll-snap-align: start;
+}
+
+#education .education-list .education-box {
+  font-size: 1.875rem;
+}
+
+#skills .inner .content {
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#skills .skills-chips {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 60%;
+}
+
+.skill-chip {
+  font-size: 1.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+
+  width: auto;
+
+  border-radius: 50px;
+  box-shadow: 0 0 0 4px var(--color-contrast);
+
+  padding: 0.75rem 1.5rem;
 }
