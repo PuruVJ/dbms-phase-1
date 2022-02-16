@@ -8,6 +8,10 @@ h1 {
   font-size: 4.5rem;
 }
 
+h2 {
+  font-size: 3.75rem;
+}
+
 .about-section {
   position: relative;
 
@@ -127,4 +131,49 @@ h1 {
 
 #intro .main .image img {
   border-radius: 50%;
+}
+
+#experience .inner .content {
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#experience .experience-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  justify-items: initial;
+
+  width: 80%;
+}
+
+#experience .experience-list .experience-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  justify-items: initial;
+
+  width: 100%;
+}
+
+#experience .experience-list .experience-box > div {
+  height: 100%;
+}
+
+#experience .experience-list .experience-box > div > time {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#experience .experience-list .experience-box h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#experience .experience-list .experience-box .department {
+  font-size: 1.2rem;
 }
