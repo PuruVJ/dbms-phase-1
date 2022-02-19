@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: hsl(222, 10%, 25%);
+}
+
 .back-to-home {
   display: block;
 

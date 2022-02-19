@@ -2,6 +2,7 @@
 
 body {
   --app-color-white: #ffffff;
+  --app-color-white-hsl: 0, 0%, 100%;
   --app-color-black: #101010;
 
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -26,7 +27,10 @@ h3 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--app-color-white);
+  background-color: hsla(var(--app-color-white-hsl), 1);
+
+  filter: invert(1);
+
   border: 3px solid transparent;
   border-radius: 8px;
   background-clip: content-box;
