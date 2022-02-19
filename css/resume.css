@@ -250,7 +250,7 @@ h2 {
 }
 
 #education .education-list .education-box {
-  font-size: 1.875rem;
+  font-size: calc(1.875rem * 0.8);
 }
 
 #skills .inner .content {
