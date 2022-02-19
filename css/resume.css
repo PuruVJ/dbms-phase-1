@@ -4,6 +4,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.back-to-home {
+  display: block;
+
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+
+  filter: invert(0.95);
+
+  z-index: 10;
+}
+
 .heading {
   position: relative;
 }
@@ -218,6 +230,7 @@ h2 {
   display: flex;
 
   overflow-x: scroll;
+  overscroll-behavior-x: none;
 
   scroll-snap-type: x mandatory;
 }
@@ -256,7 +269,7 @@ h2 {
   width: 60%;
 }
 
-.skill-chip {
+#skills .skill-chip {
   font-size: 1.2rem;
   font-weight: 500;
   white-space: nowrap;
@@ -267,4 +280,36 @@ h2 {
   box-shadow: 0 0 0 4px var(--color-contrast);
 
   padding: 0.75rem 1.5rem;
+}
+
+#footer {
+  height: 30vh;
+}
+
+#footer .content {
+  height: 30vh;
+
+  top: initial;
+  bottom: 0;
+
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#footer .social-media-links {
+  display: flex;
+  gap: 1rem;
+
+  height: max-content;
+  width: max-content;
+}
+
+#footer .social-media-links a {
+  display: block;
+}
+
+#footer .social-media-links img {
+  filter: invert(0.95);
 }
