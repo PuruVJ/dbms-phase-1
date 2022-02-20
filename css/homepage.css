@@ -82,10 +82,12 @@ h1 {
   width: 2rem;
 
   filter: invert(0.95);
+
+  transition: transform 200ms ease;
 }
 
-.icons ion-icon:hover {
-  color: #ff7200;
+.icons a img:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
 }
 
 .resume-link {

@@ -287,11 +287,11 @@ h2 {
 }
 
 #footer {
-  height: 40vh;
+  height: 100vh;
 }
 
 #footer .content {
-  height: 40vh;
+  height: 100vh;
 
   top: initial;
   bottom: 0;
@@ -304,7 +304,7 @@ h2 {
 
 #footer .social-media-links {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
 
   height: max-content;
   width: max-content;
@@ -316,4 +316,13 @@ h2 {
 
 #footer .social-media-links img {
   filter: invert(0.95);
+
+  width: 5rem;
+  height: auto;
+
+  transition: transform 200ms ease;
+}
+
+#footer .social-media-links img:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
 }
