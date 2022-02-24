@@ -8,6 +8,48 @@ html {
   background-color: hsl(222, 10%, 25%);
 }
 
+a:visited {
+  color: var(--color-contrast);
+}
+
+a[href]:not(.scroll-down) {
+  --distance: calc(50% - 0.375rem);
+  --opacity: 0.35;
+  --duration: 100ms;
+  --easing: ease-in;
+
+  font-weight: 600 !important;
+
+  text-decoration: none;
+
+  padding: 0 0.25rem;
+
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent var(--distance),
+    hsla(var(--color-contrast-hsl), var(--opacity)) var(--distance),
+    hsla(var(--color-contrast-hsl), var(--opacity)) 100%
+  );
+  background-size: 100% 200%;
+  background-position: 0 0;
+
+  transition: color var(--duration) var(--easing), background-position var(--duration) var(--easing),
+    background-image var(--duration) var(--easing), border-radius var(--duration) var(--easing),
+    --opacity var(--duration) var(--easing);
+}
+
+a[href]:not(.scroll-down):hover,
+a[href]:not(.scroll-down):focus-visible {
+  background-position: 0 100%;
+
+  color: var(--color);
+  font-weight: 600 !important;
+
+  border-radius: 0.25rem;
+
+  --opacity: 1;
+}
+
 .back-to-home {
   display: block;
 
@@ -72,12 +114,16 @@ h2 {
 
 .about-section:nth-child(2n + 1) {
   --color: var(--app-color-black);
+  --color-hsl: var(--app-color-black-hsl);
   --color-contrast: var(--app-color-white);
+  --color-contrast-hsl: var(--app-color-white-hsl);
 }
 
 .about-section:nth-child(2n) {
   --color: var(--app-color-white);
+  --color-hsl: var(--app-color-white-hsl);
   --color-contrast: var(--app-color-black);
+  --color-contrast-hsl: var(--app-color-black-hsl);
 }
 
 .about-section .inner {
@@ -311,6 +357,9 @@ h2 {
 }
 
 #footer .social-media-links a {
+  all: unset;
+  cursor: pointer;
+
   display: block;
 }
 
