@@ -33,8 +33,6 @@ const observer = new IntersectionObserver(
         Array.from(carousalDots.children).forEach((dot) => dot.classList.remove('visible'));
 
         currentDot.classList.add('visible');
-        // educationBoxes.forEach((box) => box.classList.remove('visible'));
-        // entry.target.classList.add('visible');
       }
     }
   },
