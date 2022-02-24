@@ -23,17 +23,12 @@ h3 {
 }
 
 ::-webkit-scrollbar {
-  background-color: transparent;
-  width: 15px;
+  width: 26px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsla(var(--app-color-white-hsl), 1);
-
-  filter: invert(1);
-
-  border: 3px solid transparent;
-  border-radius: 8px;
-  background-clip: content-box;
-  transition: all 200ms;
+  border: 11px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #aaaaaa;
 }
