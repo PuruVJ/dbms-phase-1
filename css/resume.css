@@ -28,6 +28,8 @@ a[href]:not(.scroll-down) {
 
   font-weight: 600 !important;
 
+  color: var(--color-contrast);
+
   text-decoration: none;
 
   padding: 0 0.25rem;
@@ -227,6 +229,9 @@ h2 {
 }
 
 #intro .main .image img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
   border-radius: 50%;
 }
 
@@ -394,6 +399,10 @@ h2 {
 
   height: max-content;
   width: max-content;
+}
+
+#footer:nth-child(2n) .social-media-links img {
+  filter: invert(0);
 }
 
 #footer .social-media-links a {
