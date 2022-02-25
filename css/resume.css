@@ -28,7 +28,7 @@ a[href]:not(.scroll-down) {
 
   font-weight: 600 !important;
 
-  color:var(--color-contrast);
+  color: var(--color-contrast);
 
   text-decoration: none;
 
@@ -103,6 +103,10 @@ h1 {
   font-size: 4.5rem;
 }
 
+h2 {
+  font-size: 3.75rem;
+}
+
 .about-section {
   position: relative;
 
@@ -120,12 +124,16 @@ h1 {
 
 .about-section:nth-child(2n + 1) {
   --color: var(--app-color-black);
+  --color-hsl: var(--app-color-black-hsl);
   --color-contrast: var(--app-color-white);
+  --color-contrast-hsl: var(--app-color-white-hsl);
 }
 
 .about-section:nth-child(2n) {
   --color: var(--app-color-white);
+  --color-hsl: var(--app-color-white-hsl);
   --color-contrast: var(--app-color-black);
+  --color-contrast-hsl: var(--app-color-black-hsl);
 }
 
 .about-section .inner {
@@ -182,7 +190,7 @@ h1 {
 
   border-radius: 12px;
 
-  box-shadow: 0 0 0 2px var(--app-color-white);
+  box-shadow: 0 0 0 2px var(--color-contrast);
 }
 
 .scroll-down .dot {
@@ -191,7 +199,7 @@ h1 {
 
   border-radius: 50%;
 
-  background-color: var(--app-color-white);
+  background-color: var(--color-contrast);
 
   transform: translateY(-7px);
 
@@ -200,15 +208,12 @@ h1 {
 
 @keyframes dot {
   0% {
-    -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
   }
   80% {
-    -webkit-transform: translateY(7px);
     transform: translateY(7px);
   }
   100% {
-    -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
   }
 }
@@ -228,4 +233,190 @@ h1 {
   height: 400px;
   object-fit: contain;
   border-radius: 50%;
+}
+
+#experience .inner .content {
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#experience .experience-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  justify-items: initial;
+
+  width: 80%;
+}
+
+#experience .experience-list .experience-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  justify-items: initial;
+
+  width: 100%;
+}
+
+#experience .experience-list .experience-box > div {
+  height: 100%;
+}
+
+#experience .experience-list .experience-box > div > time {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#experience .experience-list .experience-box h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#experience .experience-list .experience-box .department {
+  font-size: 1.2rem;
+}
+
+#education .inner .content {
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#education .education-list {
+  width: 100%;
+
+  display: flex;
+
+  overflow-x: scroll;
+  overscroll-behavior-x: none;
+
+  scroll-snap-type: x mandatory;
+}
+
+#education .education-list .education-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 60vh;
+  width: 100vw;
+
+  flex: 0 0 100%;
+
+  padding: 5rem 6rem;
+
+  scroll-snap-align: start;
+}
+
+#education .education-list .education-box {
+  font-size: calc(1.875rem * 0.8);
+}
+
+#education .carousal-dots {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+#education .carousal-dot {
+  --size: 8px;
+  height: var(--size);
+  width: var(--size);
+
+  background-color: hsla(var(--color-contrast-hsl), 0.5);
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 50%;
+
+  padding: 0;
+
+  transition: backround-color 100ms ease-in;
+}
+
+#education .carousal-dot.visible {
+  background-color: hsla(var(--color-contrast-hsl), 1);
+}
+
+#skills .inner .content {
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#skills .skills-chips {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 60%;
+}
+
+#skills .skill-chip {
+  font-size: 1.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+
+  width: auto;
+
+  border-radius: 50px;
+  box-shadow: 0 0 0 4px var(--color-contrast);
+
+  padding: 0.75rem 1.5rem;
+}
+
+#footer {
+  height: 100vh;
+}
+
+#footer .content {
+  height: 100vh;
+
+  top: initial;
+  bottom: 0;
+
+  place-items: start;
+  justify-items: center;
+
+  padding-top: 2rem;
+}
+
+#footer .social-media-links {
+  display: flex;
+  gap: 3rem;
+
+  height: max-content;
+  width: max-content;
+}
+
+#footer .social-media-links a {
+  all: unset;
+  cursor: pointer;
+
+  display: block;
+}
+
+#footer .social-media-links img {
+  filter: invert(0.95);
+
+  width: 5rem;
+  height: auto;
+
+  transition: transform 200ms ease;
+}
+
+#footer .social-media-links img:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
 }
