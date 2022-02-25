@@ -401,6 +401,10 @@ h2 {
   width: max-content;
 }
 
+#footer:nth-child(2n) .social-media-links img {
+  filter: invert(0);
+}
+
 #footer .social-media-links a {
   all: unset;
   cursor: pointer;
