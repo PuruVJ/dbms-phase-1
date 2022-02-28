@@ -178,15 +178,30 @@ h2 {
   --color-contrast-hsl: var(--app-color-white-hsl);
 }
 
-.about-section:nth-child(2n + 1) .icons img {
-  filter: invert(0.95);
-}
-
 .about-section:nth-child(2n) {
   --color: var(--app-color-white);
   --color-hsl: var(--app-color-white-hsl);
   --color-contrast: var(--app-color-black);
   --color-contrast-hsl: var(--app-color-black-hsl);
+}
+
+.about-section:nth-child(2n + 1) .icons img {
+  filter: invert(0.95);
+}
+
+.about-section .iiitdm-logo {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+
+  width: 4rem;
+  height: auto;
+
+  /* filter: invert(0.95); */
+}
+
+.about-section:nth-child(2n) .iiitdm-logo {
+  filter: invert(0.95);
 }
 
 .about-section .inner {
